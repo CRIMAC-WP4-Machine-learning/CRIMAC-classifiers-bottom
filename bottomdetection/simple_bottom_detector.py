@@ -20,7 +20,7 @@ def detect_bottom(zarr_data: xr.Dataset, parameters: Parameters = Parameters()) 
 
     heave_corrected_transducer_depth = zarr_data['heave'] + zarr_data['transducer_draft'][channel_index]
 
-    pulse_duration = float(zarr_data['pulse_length'][channel_index])
+    pulse_duration = float(zarr_data['pulse_length'][channel_index].values[0])
     depth_ranges, indices = bottom_utils.detect_bottom_single_channel(channel_sv, threshold_sv, heave_corrected_transducer_depth, pulse_duration, parameters.minimum_range)
 
     depth_ranges_back_step, indices_back_step = back_step(channel_sv, indices, heave_corrected_transducer_depth,
