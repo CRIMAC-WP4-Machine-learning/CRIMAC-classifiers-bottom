@@ -27,9 +27,9 @@ if __name__ == '__main__':
     output_name = os.getenv('OUTPUT_NAME', 'out.parquet')
     algorithm = os.getenv('ALGORITHM', 'simple')
 
-    in_dir = os.path.expanduser('/in_dir')
-    out_dir = os.path.expanduser('/out_dir')
-    work_dir = os.path.expanduser('/work_dir')
+    in_dir = os.path.expanduser('/datain')
+    out_dir = os.path.expanduser('/dataout')
+    work_dir = os.path.expanduser('/workin')
 
     parameters = Parameters()
     for key in asdict(parameters).keys():
