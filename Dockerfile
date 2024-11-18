@@ -19,6 +19,8 @@ ARG commit_sha
 
 ENV VERSION_NUMBER=$version_number
 ENV COMMIT_SHA=$commit_sha
+LABEL COMMIT_SHA=$commit_sha
+LABEL VERSION_NUMBER=$version_number
 
 COPY --from=builder /install /usr/local
 COPY bottomdetection /app/bottomdetection
