@@ -29,4 +29,4 @@ ENV PYTHONPATH "${PYTHONPATH}:/app"
 
 WORKDIR /app
 
-CMD ["sh", "-c", "python3 /app/bottomdetection/docker_main.py >> /dataout/log.txt 2>&1"]
+CMD ["sh", "-c", "python3 -u /app/bottomdetection/docker_main.py >> /dataout/log_bottom.txt 2>&1"]
