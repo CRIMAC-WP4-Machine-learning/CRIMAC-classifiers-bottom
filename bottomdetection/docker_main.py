@@ -46,6 +46,12 @@ if __name__ == '__main__':
     client = Client()
     print(client)
 
+    print(f"Zarr file: {in_dir}/{input_name}\r\n")
+    print(f"Out file: {out_dir}/{output_name}\r\n")
+    print(f"Work dir: {work_dir}\r\n")
+    print(f"Algorithn: {algorithm}\r\n")
+    print(f"Parameters: {parameters}\r\n")
+
     bottom_detection_main.run(zarr_file=in_dir + '/' + input_name,
                               out_file=out_dir + '/' + output_name,
                               work_dir=work_dir,
