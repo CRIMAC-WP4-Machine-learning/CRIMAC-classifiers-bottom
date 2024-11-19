@@ -33,6 +33,7 @@ def run(zarr_file: str,
         algorithm: str = 'simple',
         parameters: Parameters = Parameters()) -> None:
 
+    print(f"Opening zarr file: {zarr_file}")
     zarr_data = xr.open_zarr(zarr_file, chunks={'frequency': 'auto', 'ping_time': 'auto', 'range': -1})
 
     print(f'\n\nInput: {zarr_file}')
